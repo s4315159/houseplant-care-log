@@ -129,10 +129,16 @@ export default function App() {
     <div className="app">
       <header className="app-header">
         <div className="brand-inline">
-          <span aria-hidden="true">🪴</span>
-          <h1>Houseplant Care &amp; Watering Log</h1>
+          <span className="brand-badge" aria-hidden="true">🪴</span>
+          <div>
+            <h1>Houseplant Care &amp; Watering Log</h1>
+            <p className="brand-tagline">Your personal plant inventory</p>
+          </div>
         </div>
         <div className="user-box">
+          <span className="avatar" aria-hidden="true">
+            {user.email?.[0]?.toUpperCase()}
+          </span>
           <span className="user-email">{user.email}</span>
           <button className="btn ghost" onClick={signOut}>
             Log out
